@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>알고리즘 문제풀이 해설 사이트</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+    <h1>알고리즘 문제풀이 해설 사이트</h1>
+</div>
+
+<div class="container">
+    <div class="button-container">
+        <button class="add-button" onclick="showPopup()">
+            <span class="button__text">문제 추가</span>
+            <span class="button__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg">
+                    <line y2="19" y1="5" x2="12" x1="12"></line>
+                    <line y2="12" y1="12" x2="19" x1="5"></line>
+                </svg>
+            </span>
+        </button>
+        <button class="delete-button" onclick="deleteProblem()">
+            <span class="text">삭제</span>
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path>
+                </svg>
+            </span>
+        </button>
+    </div>
+
+    <div class="week-section" id="week1">
+        <h2>1주차</h2>
+    </div>
+
+    <div class="week-section" id="week2">
+        <h2>2주차</h2>
+    </div>
+</div>
+
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <span class="close" onclick="hidePopup()">닫기</span>
+        <h3>문제 추가</h3>
+        <select id="week">
+            <option value="week1">1주차</option>
+            <option value="week2">2주차</option>
+        </select>
+        <input type="text" id="title" placeholder="문제 제목">
+        <input type="text" id="link" placeholder="문제 링크">
+        <textarea id="explanation" placeholder="문제 해설"></textarea>
+        <textarea id="code" placeholder="코드"></textarea>
+        <textarea id="codeExplanation" placeholder="코드 해설"></textarea>
+        <button class="submit" onclick="addProblem()">추가하기</button>
+    </div>
+</div>
+<script src="scripts.js"></script>
+</body>
+</html>
