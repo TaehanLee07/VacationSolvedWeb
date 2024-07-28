@@ -36,7 +36,7 @@ function addProblem() {
             </div>
             <div class="code">
                 <h4>코드</h4>
-                <pre><code>${code}</code></pre>
+                <pre><code class="language-java">${code}</code></pre>
             </div>
             <div class="explanation">
                 <h4>코드 해설</h4>
@@ -49,6 +49,7 @@ function addProblem() {
     saveProblem(week, title, link, explanation, code, codeExplanation);
     hidePopup();
 }
+
 
 function saveProblem(week, title, link, explanation, code, codeExplanation) {
     var problems = JSON.parse(localStorage.getItem("problems")) || [];
@@ -69,7 +70,7 @@ function loadProblems() {
                 </div>
                 <div class="code">
                     <h4>코드</h4>
-                    <pre><code>${problem.code}</code></pre>
+                    <pre><code class="language-java">${problem.code}</code></pre>
                 </div>
                 <div class="explanation">
                     <h4>코드 해설</h4>
@@ -80,6 +81,7 @@ function loadProblems() {
         document.getElementById(problem.week).insertAdjacentHTML('beforeend', problemHTML);
     });
 }
+
 
 function deleteProblem() {
     var week1Problems = document.getElementById("week1").getElementsByClassName("problem");
